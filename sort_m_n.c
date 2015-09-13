@@ -9,7 +9,7 @@ struct ln                                      //global variable maxium is 50
 		int num;
 }s[50];
 
-int cmp( const void *a , const void *b )          //cmpÊÇ×Ô¶¨ÒåµÄ±È½Ïº¯Êı£¬Êä´¦°´´ÓĞ¡µ½´óÅÅÁĞ
+int cmp( const void *a , const void *b )          //cmpÃŠÃ‡Ã—Ã”Â¶Â¨Ã’Ã¥ÂµÃ„Â±ÃˆÂ½ÃÂºÂ¯ÃŠÃ½Â£Â¬ÃŠÃ¤Â´Â¦Â°Â´Â´Ã“ÃÂ¡ÂµÂ½Â´Ã³Ã…Ã…ÃÃ
 { 
 	int i=0;
 	struct ln *c; 
@@ -39,7 +39,7 @@ void sort(int **buf,int row,int col)
 	
 	}
 
-	qsort(s,row,sizeof(s[0]),cmp);        //qsort ÓÃÓÚ¿ìËÙÅÅÁĞ
+	qsort(s,row,sizeof(s[0]),cmp);        //qsort Ã“ÃƒÃ“ÃšÂ¿Ã¬Ã‹Ã™Ã…Ã…ÃÃ
 /*	for(i=0;i<row;i++)
 	{
 		for(j=0;j<col;j++)
@@ -83,3 +83,44 @@ unsigned parity(unsigned x)
 
 
   */
+
+/*æœ‰æ— ç¯ å‡½æ•°æµ‹è¯•
+// return value is 0 means no circle,and is 1 means ring occurred
+int is_Looplist(Nodelist *Head)
+{
+	Nodelist *p1,*p2;
+	if(head ==NULL || head->next ==NULL)
+	{
+		printf("no circle!\n");
+		return 0;
+
+	}
+	p1 = Head;
+	p2 = Head;
+
+	while(p1->next!=NULL && p1->next->next !=NULL )
+	{
+		p2 = p2->next;
+		p1 = p1->next->next;
+		if(p1 =p2)
+		{
+			printf("there is circle!\n");
+			return 1;
+		}
+
+	}
+	return 0;
+}
+
+
+
+
+
+}
+
+
+
+
+
+
+*/
